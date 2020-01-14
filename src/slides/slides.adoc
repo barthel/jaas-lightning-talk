@@ -1,0 +1,147 @@
+include::_config.adoc[]
+= Example Manual
+{author}
+
+== Introduction
+
+[%step]
+* This is a user manual for an example project.
+* This project does something.
+* We just haven't decided what that is yet.
+
+== Speaker Notes
+
+Press the kbd:[`*s*`] key to access speaker notes.
+
+[NOTE.speaker]
+--
+You've unlocked the super secret notes area.
+Neat huh?
+--
+
+== Source Code
+
+[source, java]
+.Java code from project
+----
+include::{sourcedir}/example/StringUtils.java[tags=contains,indent=0]
+----
+
+[source, rust]
+----
+fn main() {
+    println!("Hello World!");
+}
+----
+
+This page was built by the following command:
+
+ $ mvn
+
+== Blank screen
+
+You can press `*b*` or `*.*` to blank your current screen.
+
+Hit it again to bring it back.
+
+== Overview
+
+Press the `*esc*` key to get an overview of your slides.
+
+== Images
+
+[.thumb]
+image::sunset_1600_1200.jpg[width=50%]
+
+== Images as background
+
+image::sunset_1600_1200.jpg[background, size=cover]
+
+Try setting an animated GIF.
+
+== Diagrams
+
+=== PlantUML file:
+
+image::bob_alice.svg[]
+
+=== UMLet file:
+
+image::example.svg[]
+
+== Attributes
+
+Press the down arrow key to see the next sub-slide.
+
+=== Attributes Part 1
+.Built-in
+asciidoctor-version:: {asciidoctor-version}
+safe-mode-name:: {safe-mode-name}
+docdir:: {docdir}
+docfile:: {docfile}
+imagesdir:: {imagesdir}
+revnumber:: {revnumber}
+
+=== Attributes Part 2
+.Custom
+project-version:: {project-version}
+sourcedir:: {sourcedir}
+
+== Resources
+
+[.small.col2]
+--
+.References
+* ...
+
+.Articles
+* ...
+
+--
+
+[.small.col2]
+--
+.Contact
+* https://github.com/barthel[*barthel*]
+* ...
+
+.Sources
+* link:{project-scm-url}[*GitHub Repo with Source Code Examples & Slide Sources*]
+
+.Image & Photo Source
+* https://de.freeimages.com/photo/architecture-1216055[Background image]
+* https://de.freeimages.com/photo/sunset-1315691[Sunset]
+--
+
+////
+== Resources
+
+[.col3-l.xx-small]
+--
+.References
+* ...
+
+.Articles
+* ...
+
+--
+
+[.col3-c.xx-small]
+--
+.Contact
+* icon:github[github] https://github.com/barthel[*barthel*]
+* ...
+
+.Sources
+* icon:code-branch[github] link:{project-scm-url}[*GitHub Repo with Source Code Examples & Slide Sources*]
+
+.Image & Photo Source
+* https://de.freeimages.com/photo/architecture-1216055[Background image],
+  https://de.freeimages.com/photo/sunset-1315691[Sunset]
+--
+
+[.col3-r.small]
+--
+...
+--
+////
