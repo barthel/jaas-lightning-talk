@@ -1,0 +1,9 @@
+== Literaturverzeichnis
+
+[.small]
+- [[PAM]][PAM] Wikipedia (de): _Pluggable Authentication Modules._ https://de.wikipedia.org/wiki/Pluggable_Authentication_Modules (abgerufen am 14. Jan. 2020)
+- [[GUIDE]][GUIDE] Oracle Corporation: _Java Authentication and Authorization Service (JAAS) Reference Guide._ https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html  Java 8. (abgerufen am 14. Jan. 2020)
+- [[TUTORIAL]][TUTORIAL] Oracle Corporation: _JAAS Authentication Tutorial._ https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/tutorials/GeneralAcnOnly.html  Java 8. (abgerufen am 14. Jan. 2020)
+- [[DEVGUIDE]][DEVGUIDE] Oracle Corporation. _Java Authentication and Authorization Service (JAAS): LoginModule Developer's Guide_. https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASLMDevGuide.html Java 8. (abgerufen am 14. Jan. 2020)
+- [[SECURITY]][SECURITY] Oracle Corporation. _Security_. https://docs.oracle.com/javase/8/docs/technotes/guides/security/ Java 8. (abgerufen am 14. Jan. 2020)
+- [[INSIDE]][INSIDE] Li Gong, Gary Ellison, Mary Dageforde: _Inside Java 2 Platform Security, Second Edition - Architecture, API Design, and Implementation._ 2003. Addision-Wesley, Pearson Education. 2003. ISBN 0-201-78791-1

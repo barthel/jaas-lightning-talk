@@ -1,0 +1,25 @@
+== Basisklassen und Interfaces
+
+=== `javax.security.auth.Subject`
+
+* Quelle einer Anfrage
+* vertritt jedwede Entity (bspw. Mensch, Gerät)
+* Verwaltet Identitäten (`Principal`) sowie Anmeldeinformationen (`Credential`)
+** Anmeldeinformationen werden in öffentliche und private Informationen unterschieden.
+* Kann eingefroren (`read-only`) werden
+* wird in der Regel automatisch erzeugt
+
+=== `javax.security.Principal`
+
+* Repräsentation einer Identität
+* Implementierung muss `java.io.Serializable` implementieren
+
+=== `Credentials`
+
+* Anmeldeinformationen bspw. Rollen oder Rechte
+* keine eigene Klassenhierarchie
+* `java.lang.Object`
+* Implementierung muss `java.io.Serializable` implementieren
+* Implementierung von `javax.security.auth.Refreshable` für zeitabhängige Anmeldeinformationen
+* Implementierung von `javax.security.auth.Destroyable` für sensible Informationen
+

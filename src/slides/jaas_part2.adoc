@@ -1,0 +1,81 @@
+include::_config.adoc[]
+= [.xx-small]#Java Authentication and# Authorization [.xx-small]#Service#: Part 2 (Work in Progress)
+{author}
+
+include::_introduction.adoc[]
+
+== [.xx-small]#Java Authentication and# Authorization [.xx-small]#Service#
+
+== Klassen und Interfaces
+
+* gebündelt in package `javax.security.auth`
+* Basisklassen
+** `javax.security.auth.Subject`, `javax.security.Principal`, `Credentials`
+* Klassen für Autorisierung
+
+include::_base_classes_and_interfaces.adoc[]
+
+== Klassen und interfaces für Authentifizierung
+
+include::_bibliography.adoc[]
+
+////
+== Resources
+
+[.small.col2]
+--
+.References
+* ...
+
+.Articles
+* ...
+
+--
+
+[.small.col2]
+--
+.Contact
+* https://github.com/barthel[*barthel*]
+* ...
+
+.Sources
+* link:{project-scm-url}[*GitHub Repo with Source Code Examples & Slide Sources*]
+
+.Image & Photo Source
+* https://de.freeimages.com/photo/architecture-1216055[Background image]
+* https://de.freeimages.com/photo/sunset-1315691[Sunset]
+--
+////
+
+////
+== Resources
+
+[.col3-l.xx-small]
+--
+.References
+* ...
+
+.Articles
+* ...
+
+--
+
+[.col3-c.xx-small]
+--
+.Contact
+* icon:github[github] https://github.com/barthel[*barthel*]
+* ...
+
+.Sources
+* icon:code-branch[github] link:{project-scm-url}[*GitHub Repo with Source Code Examples & Slide Sources*]
+
+.Image & Photo Source
+* https://de.freeimages.com/photo/architecture-1216055[Background image],
+  https://de.freeimages.com/photo/sunset-1315691[Sunset]
+--
+
+[.col3-r.small]
+--
+...
+--
+////

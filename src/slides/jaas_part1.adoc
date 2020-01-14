@@ -1,0 +1,182 @@
+include::_config.adoc[]
+= [.xx-small]#Java# Authentication [.xx-small]#and Authorization Service#: Part 1 (Work in Progress)
+{author}
+
+include::_introduction.adoc[]
+
+== [.xx-small]#Java# Authentication [.xx-small]#and Authorization Service#
+
+* Verifizierung einer Entität (bspw. ein Mensch oder Gerät)
+* Synonym für Prüfung (Authentifikation) und Bezeugung (Authentifizierung) der Echtheit
+* Zuverlässig und sicher feststellen, wer gerade Java-Code ausführt [.xx-small]#^<<footnote_1,1>>^#.
+
+[.refs]
+--
+* [[footnote_1]][.xx-small]#^1.^# Übersetzung aus <<GUIDE>>
+* Wikipedia (de): _Java Authentication and Authorization Service_. https://de.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service (abgerufen am 14. Jan. 2020)
+--
+
+== Klassen und Interfaces
+
+* gebündelt in package `javax.security.auth`
+* Basisklassen
+** `javax.security.auth.Subject`, `javax.security.Principal`, `Credentials`
+* Klassen für Authentifizierung
+** `javax.security.auth.login.LoginContext`,`javax.security.auth.login.Configuration`, `javax.security.auth.spi.LoginModule`, `javax.security.auth.callback.CallbackHandler`, `javax.security.auth.callback.Callback`, `java.security.AccessControlContext`
+
+include::_base_classes_and_interfaces.adoc[]
+
+== Klassen und interfaces für Authentifizierung
+
+=== `javax.security.auth.login.LoginContext`
+
+* Schnittstelle zur anwendungsspezifischen Authentifizierung
+* Erzeugt -- wenn nötig -- `Subject`
+* Erzeugt und führt die konfigurierten (`Configuration`) `LoginModule` aus
+* Stellt `Callbackhandler` für die `LoginModule` bereit
+
+=== `javax.security.auth.login.Configuration`
+
+* Definiert, welche `LoginModule` für eine Anwendung augeführt werden
+* Jeder Eintrag hat einen eindeutigen Namen
+* Standardimplementierung Konfiguration über Datei
+** Konfiguration über Startparameter _java.security.auth.login.config_ als URL.
+
+[source]
+--
+ Login {
+   com.sun.security.auth.module.UnixLoginModule required;
+   com.sun.security.auth.module.Krb5LoginModule optional
+                   useTicketCache="true"
+                   ticketCache="${user.home}${/}tickets";
+ };
+--
+
+[.refs]
+--
+JavaDoc von `javax.security.auth.login.Configuration`: https://docs.oracle.com/javase/8/docs/api/javax/security/auth/login/Configuration.html (abgerufen 14. Jan. 2020)
+--
+
+=== `javax.security.auth.spi.LoginModule`
+
+* Interface zur Implementierung unterschiedlicher Authentifizierungstechnologien/-mechanismen
+* Definierter Ablauf der Authentifizierung
+
+[%notitle]
+=== `javax.security.auth.spi.LoginModule`
+
+[source,java]
+----
+public interface LoginModule {
+
+    /**
+     * Initialize this LoginModule.
+     */
+    void initialize(Subject subject, CallbackHandler callbackHandler, Map<String,?> sharedState, Map<String,?> options);
+
+    /**
+     * Method to authenticate a {@code Subject} (phase 1).
+     */
+    boolean login() throws LoginException;
+
+    /**
+     * Method to commit the authentication process (phase 2).
+     */
+    boolean commit() throws LoginException;
+
+    /**
+     * Method to abort the authentication process (phase 2).
+     */
+    boolean abort() throws LoginException;
+
+    /**
+     * Method which logs out a {@code Subject}.
+     */
+    boolean logout() throws LoginException;
+}
+----
+
+=== `javax.security.auth.callback.CallbackHandler`
+
+* Verbindung von `LoginModule` zur Anwendung
+* Bereitstellen von anwendungs-, benutzerspezifische Anfragen, Anzeigen (`Callback`)
+* `LoginModule` muss `Callback`-Klassen kennen
+
+[source, java]
+----
+public interface CallbackHandler {
+    void handle(Callback[] callbacks) throws java.io.IOException, UnsupportedCallbackException;
+}
+----
+
+=== `javax.security.auth.callback.Callback`
+
+* Interface für spezifische `Callback` Implementierung
+* Informationstranzfer zwischen Anwendung und `LoginModule`
+* Standardimplementierungen
+** `javax.security.auth.callback.NameCallback`, `javax.security.auth.callback.PasswordCallback` u.a.
+
+=== `java.security.AccessControlContext`
+
+include::_bibliography.adoc[]
+
+////
+== Resources
+
+[.small.col2]
+--
+.References
+* ...
+
+.Articles
+* ...
+
+--
+
+[.small.col2]
+--
+.Contact
+* https://github.com/barthel[*barthel*]
+* ...
+
+.Sources
+* link:{project-scm-url}[*GitHub Repo with Source Code Examples & Slide Sources*]
+
+.Image & Photo Source
+* https://de.freeimages.com/photo/architecture-1216055[Background image]
+* https://de.freeimages.com/photo/sunset-1315691[Sunset]
+--
+////
+
+////
+== Resources
+
+[.col3-l.xx-small]
+--
+.References
+* ...
+
+.Articles
+* ...
+
+--
+
+[.col3-c.xx-small]
+--
+.Contact
+* icon:github[github] https://github.com/barthel[*barthel*]
+* ...
+
+.Sources
+* icon:code-branch[github] link:{project-scm-url}[*GitHub Repo with Source Code Examples & Slide Sources*]
+
+.Image & Photo Source
+* https://de.freeimages.com/photo/architecture-1216055[Background image],
+  https://de.freeimages.com/photo/sunset-1315691[Sunset]
+--
+
+[.col3-r.small]
+--
+...
+--
+////

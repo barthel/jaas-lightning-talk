@@ -23,17 +23,17 @@
 .col3-cr { float: right; width: 66% }
 .col3-r { float: right; width: 33% }
 
-.small p, .small li, p.small, div.small, span.small, .small code, .TABLE.small, .small TH {
+.small p, .small li, .small h2, p.small, h2.small, div.small, span.small, .small code, .TABLE.small, .small TH, h2 span.small {
     font-size: 94% !important;
 }
-.x-small p, .x-small li, p.x-small, div.x-small, span.x-small, .x-small code, TABLE.x-small, .x-small TH {
+.x-small p, .x-small li, .x-small h2, p.x-small, h2.x-small, div.x-small, span.x-small, .x-small code, TABLE.x-small, .x-small TH, h2 span.x-small {
     font-size: 86% !important;
 }
 .reveal .x-small TH, .reveal .x-small TD, .x-small TD P {
     padding: 0.1em 0.25em;
     margin: 8px 0;
 }
-.xx-small p, .xx-small li, p.xx-small, div.xx-small, span.xx-small, .xx-small code, .xx-small TABLE, .xx-small TH {
+.xx-small p, .xx-small li, .xx-small h2, p.xx-small, h2.xx-small, div.xx-small, span.xx-small, .xx-small code, .xx-small TABLE, .xx-small TH, h2 span.xx-small {
     font-size: 78% !important;
 }
 .small LI P {
@@ -63,3 +63,50 @@
     font-size: 1.2em;
     line-height: 1.2em;
     white-space: pre-wrap; }
+
+/* ------------------------------------------------------ The refs section */
+DIV.refs {
+    background-color: rgba(255,255,255,0);
+    border-top: 1px solid rgba(0,0,0,.2);
+    padding: 2px 0 0 0;
+    width: 100%;
+    position: inherit;
+    left: 0;
+    bottom: 0;
+    text-align: right;
+}
+
+DIV.refs P, DIV.refs P A {
+    color: rgba(0,0,0,.4);
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+DIV.refs DIV.ulist {
+    margin: 0; padding: 0;
+    line-height: 0.9;
+    font-size: 0.75rem;
+}
+
+DIV.refs DIV.ulist UL {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+DIV.refs DIV.ulist UL LI {
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+/* hovering effects */
+DIV.refs:hover {
+    cursor: pointer;
+}
+DIV.refs:hover LI P {
+    color: black;
+}
+DIV.refs LI:hover P A {
+    text-decoration: underline;
+}

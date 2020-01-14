@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.barthel</groupId>
-    <artifactId>template-lightning-talk</artifactId>
+    <artifactId>jaas-lightning-talk</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Template for Asciidoctor based reveal.js slides.</name>
+    <name>Java Authentication and Authorization Service</name>
     <description></description>
 
     <!--
@@ -16,8 +16,6 @@
     The credits for the base settings goes to the contributors of the project above.
     -->
     <properties>
-
-        <slides.filename>slides.html</slides.filename>
 
         <project.slides.source.directory>${project.basedir}/src/slides</project.slides.source.directory>
         <project.styles.source.directory>${project.slides.source.directory}/styles</project.styles.source.directory>
@@ -48,9 +46,9 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git@github.com:barthel/template-lightning-talk.git</connection>
-        <url>https://github.com/barthel/template-lightning-talk.git</url>
-        <developerConnection>scm:git:git@github.com:barthel/template-lightning-talk.git</developerConnection>
+        <connection>scm:git:git@github.com:barthel/jaas-lightning-talk.git</connection>
+        <url>https://github.com/barthel/jaas-lightning-talk.git</url>
+        <developerConnection>scm:git:git@github.com:barthel/jaas-lightning-talk.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
@@ -265,8 +263,7 @@
                                 </resource>
                             </resources>
                             <outputDirectory>${project.slides.target.directory}</outputDirectory>
-                            <outputFile>${slides.filename}</outputFile>
-                            <backend>revealjs</backend>
+                            <backend>revealjs:html</backend>
                             <templateDir>
                                 ${project.build.directory}/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates
                             </templateDir>
