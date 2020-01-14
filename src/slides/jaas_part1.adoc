@@ -66,7 +66,7 @@ JavaDoc von `javax.security.auth.login.Configuration`: https://docs.oracle.com/j
 === `javax.security.auth.spi.LoginModule`
 
 [source,java]
-----
+--
 public interface LoginModule {
 
     /**
@@ -94,7 +94,7 @@ public interface LoginModule {
      */
     boolean logout() throws LoginException;
 }
-----
+--
 
 === `javax.security.auth.callback.CallbackHandler`
 
@@ -103,11 +103,11 @@ public interface LoginModule {
 * `LoginModule` muss `Callback`-Klassen kennen
 
 [source, java]
-----
+--
 public interface CallbackHandler {
     void handle(Callback[] callbacks) throws java.io.IOException, UnsupportedCallbackException;
 }
-----
+--
 
 === `javax.security.auth.callback.Callback`
 
