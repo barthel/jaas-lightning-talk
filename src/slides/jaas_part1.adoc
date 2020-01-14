@@ -1,6 +1,8 @@
 include::_config.adoc[]
-= [.xx-small]#Java# Authentication [.xx-small]#and Authorization Service#: Part 1 (Work in Progress)
+= Java Authentication and Authorization Service: Part 1 (Work in Progress)
 {author}
+
+include::_footer.adoc[]
 
 include::_introduction.adoc[]
 

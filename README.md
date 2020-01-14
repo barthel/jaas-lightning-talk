@@ -1,7 +1,7 @@
-# template-lightning-talk
-Template for asciidoctor based lightning talk slides.
+# jaas-lightning-talk
 
-## Credits
-
-* Background image (background_3303_2202.jpg) by Jean Scheijen https://de.freeimages.com/photo/architecture-1216055
-* Sunset phote (sunset_1600_1200.jpg) by Federico Carnevale https://de.freeimages.com/photo/sunset-1315691
+This template based on https://github.com/barthel/template-lightning-talk.
+Please take a look on https://github.com/barthel/template-lightning-talk for more acknowledgements.
+ 
+## Resources/Credits
+* Background image ([background_3303_2202.jpg](./src/slides/images/background_3303_2202.jpg)) by Jean Scheijen: https://de.freeimages.com/photo/architecture-1216055
