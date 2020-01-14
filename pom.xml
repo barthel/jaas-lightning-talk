@@ -267,7 +267,6 @@
                             <templateDir>
                                 ${project.build.directory}/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates
                             </templateDir>
-                            <!-- <sourceHighlighter>highlightjs</sourceHighlighter> -->
                             <doctype>html5</doctype>
                             <attributes>
                                 <!-- buildNumber will provided by buildnumber-maven-plugin -->

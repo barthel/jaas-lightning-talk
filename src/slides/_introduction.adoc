@@ -1,7 +1,7 @@
 == Einführung
 
 * Java-API um Dienste zur Authentifizierung und Autorisierung in Java Anwendungen bereitzustellen
-* Implementiert das _Pluggable Authentication Modules_ (PAM) Konzept [.xx-small]#^<<PAM>>^#.
+* Implementiert das _Pluggable Authentication Modules_ (PAM) Konzept [.xx-small]#^[PAM]^#.
 * Seit Java 1.4 Teil der Platform.
 
 [.refs]

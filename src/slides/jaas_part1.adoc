@@ -8,11 +8,11 @@ include::_introduction.adoc[]
 
 * Verifizierung einer Entität (bspw. ein Mensch oder Gerät)
 * Synonym für Prüfung (Authentifikation) und Bezeugung (Authentifizierung) der Echtheit
-* Zuverlässig und sicher feststellen, wer gerade Java-Code ausführt [.xx-small]#^<<footnote_1,1>>^#.
+* Zuverlässig und sicher feststellen, wer gerade Java-Code ausführt [.xx-small]#^[1]^#.
 
 [.refs]
 --
-* [[footnote_1]][.xx-small]#^1.^# Übersetzung aus <<GUIDE>>
+* [[footnote_1]][1] Übersetzung aus <<GUIDE>>
 * Wikipedia (de): _Java Authentication and Authorization Service_. https://de.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service (abgerufen am 14. Jan. 2020)
 --
 
